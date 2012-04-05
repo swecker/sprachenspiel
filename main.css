@@ -63,7 +63,14 @@ a:hover {
 	position:absolute;
 	height: 80px;
 	width: 70px;
+}
+
+.grass {
 	background-image: url(column.png);
+}
+
+.dirt {
+	background-image: url(dirt_column.png);
 }
 
 #character {
