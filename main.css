@@ -25,10 +25,68 @@ a:hover {
 	color: #fafbfb;
 }
 
-#main_box {
-	background-color: #13383e;
-	min-height: 600px;
+.wrapper {
 	margin: auto;
 	width: 800px;
+}
+
+#main_box {
+	position: absolute;
+	background-color: #13383e;
+	min-height: 600px;
+	width: 800px;
 	padding: 20px;
+}
+
+#canvas {
+	position:absolute;
+	top: 180px;
+}
+
+#canvasSpace {
+	height: 320px;
+}
+#dialogBox {
+	position:absolute;
+	top: 500px;
+}
+
+.row {
+	position:absolute;
+}
+
+.odd {
+	left: 35px;
+}
+
+.tile {
+	position:absolute;
+	height: 80px;
+	width: 70px;
+	background-image: url(column.png);
+}
+
+#character {
+	position:absolute;
+	height: 76px;
+	width: 48px;
+	background-image: url(player.png);
+}
+#npc {
+	position:absolute;
+	height: 82px;
+	width: 40px;
+	background-image: url(npc.png);
+}
+#pirate {
+	position:absolute;
+	height: 121px;
+	width: 60px;
+	background-image: url(pirate.png);
+}
+#gnome_dialog {
+	position:absolute;
+	height: 800px;
+	width: 535px;
+	background-image: url(lawn_gnome_dialog.png);
 }
