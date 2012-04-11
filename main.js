@@ -29,59 +29,96 @@
 	 */
 
 var heightMap = [
-    [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,8,8,8,8,8,8,8,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,8,3,3,3,3,3,8,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,8,3,3,3,3,3,8,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,8,3,3,3,3,3,8,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,8,3,3,3,3,3,8,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,8,8,8,3,8,8,8,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,2,2,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,2,2,9,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,2,2,8,2,2,2,2,2,2,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,2,2,8,2,2,2,2,2,2,2,2,3,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,0,0,0,0,0,8,0,0,0,0,0,2,2,2,2,2,2,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,8,8,8,8,8,8,2,2],
-    [2,2,2,2,2,2,0,1,1,1,1,8,1,1,1,1,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,8,8,8,2,2,2,2,8,2,2],
-    [2,2,2,2,2,2,0,1,2,2,2,8,2,2,2,1,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,8,2,2,2,2,2,2,8,2,2],
-    [2,2,2,2,2,2,0,1,2,3,3,7,3,3,2,1,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,8,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,0,1,2,3,4,6,4,3,2,1,0,2,2,2,2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,2,2,2,2,2,8,2,2,2,2,2,2,8,2,2],
-    [2,2,2,2,2,2,0,1,2,3,4,5,4,3,2,1,0,2,2,2,2,2,2,2,2,2,1,1,2,2,2,2,2,2,2,2,2,2,2,2,8,2,2,2,2,2,2,8,2,2],
-    [2,2,2,2,2,2,0,1,2,3,4,4,4,3,2,1,0,2,2,2,2,2,2,2,2,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,8,2,2,2,8,8,8,8,2,2],
-    [2,2,2,2,2,2,0,1,2,3,3,3,3,3,2,1,0,2,2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,2,2,2,2,2,2,2,8,2,2,2,8,2,2,2,2,2],
-    [2,2,2,2,2,2,0,1,2,2,2,2,2,2,2,1,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,8,2,2,2,8,2,2,2,2,2],
-    [2,2,2,2,2,2,0,1,1,1,1,1,1,1,1,1,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,8,2,2,2,8,2,2,2,2,2],
-    [2,2,2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,8,2,2,2,8,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,8,2,2,2,8,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,8,8,8,8,8,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
-    [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]
-	];
+  [2,2,2,2,2,2,2,2,2,4,2,4,2,4,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,4,6,5,4,3,2,2],
+  [2,2,2,2,2,2,2,2,2,4,2,4,2,4,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,4,2,4,2,4,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,4,2,4,2,4,2,4,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,8,8,8,8,8,8,8,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,8,3,3,3,3,3,8,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,8,3,3,3,3,3,8,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,8,3,3,3,3,3,8,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,8,3,3,3,3,3,8,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,8,8,8,3,8,8,8,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,2,2,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,2,2,9,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,2,2,8,2,2,2,2,2,2,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,2,2,8,2,2,2,2,2,2,2,2,3,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,0,0,0,0,0,8,0,0,0,0,0,2,2,2,2,2,2,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,8,8,8,8,8,8,2,2],
+  [2,2,2,2,2,2,0,1,1,1,1,8,1,1,1,1,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,8,8,8,2,2,2,2,8,2,2],
+  [2,2,2,2,2,2,0,1,2,2,2,8,2,2,2,1,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,8,2,2,2,2,2,2,8,2,2],
+  [2,2,2,2,2,2,0,1,2,3,3,7,3,3,2,1,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,8,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,0,1,2,3,4,6,4,3,2,1,0,2,2,2,2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,2,2,2,2,2,8,2,2,2,2,2,2,8,2,2],
+  [2,2,2,2,2,2,0,1,2,3,4,5,4,3,2,1,0,2,2,2,2,2,2,2,2,2,1,1,2,2,2,2,2,2,2,2,2,2,2,2,8,2,2,2,2,2,2,8,2,2],
+  [2,2,2,2,2,2,0,1,2,3,4,4,4,3,2,1,0,2,2,2,2,2,2,2,2,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,8,2,2,2,8,8,8,8,2,2],
+  [2,2,2,2,2,2,0,1,2,3,3,3,3,3,2,1,0,2,2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,2,2,2,2,2,2,2,8,2,2,2,8,2,2,2,2,2],
+  [2,2,2,2,2,2,0,1,2,2,2,2,2,2,2,1,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,8,2,2,2,8,2,2,2,2,2],
+  [2,2,2,2,2,2,0,1,1,1,1,1,1,1,1,1,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,8,2,2,2,8,2,2,2,2,2],
+  [2,2,2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,8,2,2,2,8,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,8,2,2,2,8,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,8,8,8,8,8,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,6,5,4,3,2,2,2]
+];
 
-var a = 1;  //Carl, What's this for?
+
+var player;
+var gnome;
+var pirate;
+initialize_characters = function() {
+  player = {
+    x: 0,
+    y: 0,
+    h: 2,
+		oldH: 2,
+    z:0,
+    skills:{
+      jump:4
+    }
+  };
+
+  gnome = {
+    x: Math.floor(Math.random()*colCount),
+    y: Math.floor(Math.random()*rowCount),
+    h: 9,
+		oldH: 9,
+    z:0,
+    skills:{
+      jump:2
+    }
+  };
+
+  pirate = {
+    x: Math.floor(Math.random()*colCount),
+    y: Math.floor(Math.random()*rowCount),
+    h: 9,
+		oldH: 9,
+    z:0,
+    skills:{
+      jump:6
+    }
+  };
+}
 
 //      Notable changes in layout:     //
 //
@@ -89,12 +126,16 @@ var a = 1;  //Carl, What's this for?
 //  xl and yl renamed to colCount and rowCount respectively
 //  grid renamed to world
 //  playerPosX and playerPosY are now in the player object as player.x and
-//  player.y also add player.z
+//  player.y also add player.h
+
+
 var world;
+var rowCount;
+var colCount;
 create_world = function() {
-  var rowCount = heightMap.length;
-  var colCount = heightMap[0].length;
-   world = [];
+  rowCount = heightMap.length;
+  colCount = heightMap[0].length;
+  world = [];
   for( y=0; y<rowCount; y++ ) {
     world[y] = [];
     for( x=0; x<colCount; x++ ) {
@@ -106,174 +147,249 @@ create_world = function() {
       // type: typeMap[y][x]
       world[y][x] = {
         type: type, 
-        z: heightMap[rowCount-1-y][x],//the rowCount-y is so that the map is reflipped right side up
+				z: 0,
+        h: heightMap[rowCount-1-y][x],//the rowCount-y is so that the map is reflipped right side up
         x: x,
         y: y }
     }
   }
 }
 
-//var viewportDiag = 3;
-var viewportLength = 9;  //should be even number for character to be in middle square
-var viewportHeight = 15;
 
-var player = {
-  x: 10,
-  y: 10,
-  z: 2
-};
-
-//var startX = playerPosX - viewportDiag;
-//var startY = playerPosY - viewportDiag;
-
-var evenRow = true;
 var viewport = [];
-prevX = prevY = 0;
+var viewportSize = 50; //should be even number for character to be in middle square
+initialize_viewport = function() {
+  xOffset = viewportSize - 1; 
+  viewportWidth = viewportSize; 
+  viewportHeight = viewportSize*2; 
+  
+  var evenRow = true;
+  prevX = prevY = 0;
 
-for( a = 0; a < viewportHeight; a++ ) {
-	viewport[a] = [];
-	length = viewportLength;
-	if( !evenRow ) { length--; }
-	x = prevX;
-	y = prevY;
-	for( b = 0; b < length; b++ ) {
-		viewport[a][b] = [x,y];
-		x++;
-		y++;
-	}
-	if( evenRow ) { prevX++; }
-	else { prevY--; }
-	evenRow = !evenRow;
+  for( a = 0; a < viewportHeight; a++ ) {
+    viewport[a] = [];
+    vlength = viewportWidth;
+    if( !evenRow ) { vlength--; }
+    x = prevX;
+    y = prevY;
+    for( b = 0; b < vlength; b++ ) {
+      viewport[a][b] = [x-xOffset,y];
+      x++;
+      y++;
+    }
+    if( evenRow ) { prevX++; }
+    else { prevY--; }
+    evenRow = !evenRow;
+  }
 }
 
-wallCheckVertical = function(preY,postY){
-  //if the new world[y][x] for the new playerPosX and playerPosY is different from the previous by more than 5, then revert back
- 	x = (viewport[6][4][0]+player.x)%50; 
- 	y = (viewport[6][4][1]+preY)%50; 
- 	a = (viewport[6][4][0]+player.x)%50;
- 	b = (viewport[6][4][1]+postY)%50; 
- 	if(world[y][x].z - world[b][a].z < -5 ){
-		return preY;
+wrapHeight = function(y) {
+	var result;
+  if (y >= rowCount){
+     result = y - rowCount;
+  } else if (y < 0) {
+    result = rowCount + y;
+  } else {
+    result = y;
+  }
+  return result;
+}
+wrapWidth = function(x) {
+	var result;
+  if (x >= colCount){
+     result = x - colCount;
+  } else if (x < 0) {
+    result = colCount + x;
+  } else {
+    result = x;
+  }
+  return result;
+}
+
+passable = function(x, y, character){
+  var result;
+ 	if( world[y][x].h - character.h < character.skills.jump ){
+    result = true;
 	} else {
- 		return postY;
+    result = false;
 	}
+  return result;
 }	
 
-wallCheckHorizontal = function(preX,postX){
-  //if the new world[y][x] for the new playerPosX and playerPosY is different from the previous by more than 5, then revert back
- 	x = (viewport[6][4][0]+preX)%50; 
- 	y = (viewport[6][4][1]+player.y)%50; 
- 	a = (viewport[6][4][0]+postX)%50;
- 	b = (viewport[6][4][1]+player.y)%50; 
- 	if(world[y][x].z - world[b][a].z < -5 ){
-		return preX;
-	} else {
- 		return postX;
-	}
-}	
- 
-
-var playerView = [];
 	
+var playerView = [];
+var visibleTiles = [];
 updatePlayerView = function() {
-	length = viewport.length;
-	for( a = 0; a < length; a++ ) {
+	vplength = viewport.length;
+	for( a = 0; a < vplength; a++ ) {
 		playerView[a] = [];
 		lengthb = viewport[a].length;  
 		for( b = 0; b < lengthb; b++ ) {
-			x = (viewport[a][b][0]+player.x)%50;
-			y = (viewport[a][b][1]+player.y)%50;
-			playerView[a][b] = world[y][x];	
+			x = wrapWidth(viewport[a][b][0]+player.x);
+			y = wrapHeight(viewport[a][b][1]+player.y);
+      world[y][x].z = a;
+			playerView[a][b] = world[y][x];
+      visibleTiles << [x,y];
+      if(world[y][x] == undefined) {
+        alert("tile at: "+x+", "+y+" doesn't exist.");
+      }
 		}
 	}
-}
-
-var ZModifier = 0;
-
-updateZModifier = function() {
-	ZModifier = playerView[6][4].z-5;
 }
 
 drawTiles = function() {
+  start = new Date();
 	updatePlayerView();
-	updateZModifier();
 	$("#canvas").html("");
 	evenRow = true;
 	for( y=0; y<playerView.length; y++ ) {
-		//var left = $('#upButton').attr('background-color');
-		//alert(left);
 		var row = $('<div id="y'+y+'"></div>').addClass("row");
 		if( !evenRow ){ row.addClass("odd") }
 		for( x=0; x<playerView[y].length; x++ ) {
-			zValue = playerView[y][x].z - ZModifier;
-			//xCoordValue = playerView[y][x].xCoord;
-			//yCoordValue = playerView[y][x].yCoord;
-			//type = playerView[y][x].type;
-			//tile = $('<div class="tile X'+x+'">'+xCoordValue+' '+yCoordValue+'</div>').css("top",(y*16)+zValue).css("left",x*64);
-      type = playerView[y][x].type
-			tile = $('<div class="tile '+type+' X'+x+'"></div>').css("top",y*16-zValue*8).css("left",x*64);
-			if(playerView[y][x].xCoord == 40 && playerView[y][x].yCoord == 40){
-				npc = $('<div id="npc" style="left:'+x*64+'px"></div>').css("top",y*16-zValue*8-70);
+			h = playerView[y][x].h - player.h;
+      type = playerView[y][x].type;
+      cx = playerView[y][x].x;
+      cy = playerView[y][x].y;
+      z = playerView[y][x].z;
+			tile = $('<div class="tile '+type+' X'+x+'">'+cy+'</div>').css("top",y*16-h*16).css("left",x*64);//.css("z-index",z);
+			row.append(tile);
+			if(playerView[y][x].x== gnome.x && playerView[y][x].y == gnome.y){
+				npc = $('<div id="npc" style="left:'+x*64+'px"></div>').css("top",y*16-h*16-70);
 				row.append(npc);
-				gnome_dialog =  $('<div id="gnome_dialog" style="left:'+(playerView[0].length*64+120)+'px"></div>').css("top",-109); 
-				row.append(gnome_dialog);
+				//gnome_dialog =  $('<div id="gnome_dialog" style="left:'+(playerView[0].length*64+120)+'px"></div>').css("top",-109); 
+				//row.append(gnome_dialog);
 			}
-		 	if(playerView[y][x].xCoord == 20 && playerView[y][x].yCoord == 20){
-				pirate = $('<div id="pirate" style="left:'+x*64+'px"></div>').css("top",y*16-zValue*8-109);
+		 	if(playerView[y][x].x== pirate.x && playerView[y][x].y== pirate.y){
+				pirate = $('<div id="pirate" style="left:'+x*64+'px"></div>').css("top",y*16-h*16-109);
 				row.append(pirate);
 			}   
-			if(x==5 && y==8){
-  			character = $('<div id="character" style="left:'+((viewport[0].length/2)*64-.5*43)+'px"></div>)');  
-				$('#canvas').append(character);
-			}
-			row.append(tile);
 		}
 	  $('#canvas').append(row);
+		$('#canvas').css("top",-585).css("left",-1250);
+		//$('#canvas').css("top",-playerView.length*16/2).css("left",-playerView[0].length*64/2);
 		evenRow = !evenRow;
 	}
-  //character = $('<div id="character" style="left:'+((viewport[0].length/2)*64-.5*43)+'px"></div>)');  
-					//.css("top",(playerView[6][4].z)*-8); 48 is the image width, can we do #Character.width?
-	//$('#canvas').append(character);
+	$('#dialogBox').append(playerView.length*16/2 + ', ' + playerView[0].length*64/2);
+	//$('#dialogBox').append(playerView.length + ', ' + playerView[0].length);
+	alert($('#character').css('height'));
+  end = new Date();
+  //alert(end-start);
 }
 
-movePlayerUp = function() {
-			player.y = wallCheckVertical(player.y,player.y+1);
-			drawTiles();
+moveCharacterUp = function(character) {
+  destY = wrapHeight(character.y + 1)
+  if( passable(character.x, destY, character) ) {
+    character.y = destY;
+    character.oldH = character.h;
+    character.h = world[character.y][character.x].h;
+    character.z = world[character.y][character.x].z;
+		if (character == player){
+			shiftScreenUp();
+		} else {
+			redraw(Character);
+		}
+  }
+  //drawTiles();
 }
-movePlayerDown = function() {
-			player.y = wallCheckVertical(player.y,player.y-1);
-			if (player.y<0){player.y=99} 
-			drawTiles();
+moveCharacterDown = function(character) {
+  destY = wrapHeight(character.y - 1)
+  if( passable(character.x, destY, character) ) {
+    character.y = destY;
+    character.oldH = character.h;
+    character.h = world[character.y][character.x].h;
+    character.z = world[character.y][character.x].z;
+		if (character == player){
+			shiftScreenDown();
+		} else {
+			redraw(Character);
+		}
+  }
+  //drawTiles();
 }
-movePlayerLeft = function() {
-			player.x = wallCheckHorizontal(player.x,player.x-1);
-			if (player.x<0){player.x=99} 
-			drawTiles();
+moveCharacterRight = function(character) {
+  destX = wrapWidth(character.x + 1)
+  if( passable(destX, character.y, character) ) {
+    character.x = destX;
+    character.oldH = character.h;
+    character.h = world[character.y][character.x].h;
+    character.z = world[character.y][character.x].z;
+		if (character == player){
+			shiftScreenRight();
+		} else {
+			redraw(Character);
+		}
+  }
+  //drawTiles();
 }
-movePlayerRight = function() {
-			player.x = wallCheckHorizontal(player.x,player.x+1);
-			drawTiles();
+moveCharacterLeft = function(character) {
+  destX = wrapWidth(character.x - 1)
+  if( passable(destX, character.y, character) ) {
+    character.x = destX;
+    character.oldH = character.h;
+    character.h = world[character.y][character.x].h;
+    character.z = world[character.y][character.x].z;
+    $("#dialogBox").append(player.oldH + ', '+(world[character.y][character.x].h)+': ');
+		if (character == player){
+			shiftScreenLeft();
+		} else {
+			redraw(character);
+		}
+  }
+  //drawTiles();
 }
 
-$(document).bind("keydown", "w", function(){ movePlayerUp(); });
-$(document).bind("keydown", "s", function(){ movePlayerDown(); });
-$(document).bind("keydown", "d", function(){ movePlayerRight(); });
-$(document).bind("keydown", "a", function(){ movePlayerLeft(); });
+redraw = function(character){  //redraw the tiles? It seems like to get the z-indexes right we have to add z-indexes for everything... ):
+
+
+}
+
+shiftScreenLeft = function() {
+  topShift = 16 - (player.oldH - player.h)*16 + parseInt($('#canvas').css('top'));
+  //alert(player.oldZ);
+  $("#canvas").animate({'top':topShift+'px','left':'+=32'});
+  $("#character").animate({'z-index':player.z});
+  $("#dialogBox").append(topShift+'-> ');
+}
+
+shiftScreenRight = function() {
+  topShift = -16 - (player.oldH - player.h)*16 + parseInt($('#canvas').css('top'));
+  //alert(player.oldZ);
+  $("#canvas").animate({'top':topShift+'px','left':'-=32'});
+  $("#character").animate({'z-index':player.z});
+  $("#dialogBox").append(topShift+'-> ');
+}
+
+shiftScreenDown = function() {
+  topShift = -16 - (player.oldH - player.h)*16 + parseInt($('#canvas').css('top'));
+  //alert(player.oldZ);
+  $("#canvas").animate({'top':topShift+'px','left':'+=32'});
+  $("#character").animate({'z-index':player.z});
+  $("#dialogBox").append(topShift+'-> ');
+}
+
+shiftScreenUp = function() {
+  topShift = 16 - (player.oldH - player.h)*16 + parseInt($('#canvas').css('top'));
+  //alert(player.oldZ);
+  $("#canvas").animate({'top':topShift+'px','left':'-=32'});
+  $("#character").animate({'z-index':player.z});
+  $("#dialogBox").append(topShift+'-> ');
+}
+
+$(document).bind("keydown", "w", function(){ moveCharacterUp(player); });
+$(document).bind("keydown", "s", function(){ moveCharacterDown(player); });
+$(document).bind("keydown", "d", function(){ moveCharacterRight(player); });
+$(document).bind("keydown", "a", function(){ moveCharacterLeft(player); });
+$(document).bind("keydown", "i", function(){ moveCharacterUp(gnome); });
+$(document).bind("keydown", "k", function(){ moveCharacterDown(gnome); });
+$(document).bind("keydown", "l", function(){ moveCharacterRight(gnome); });
+$(document).bind("keydown", "j", function(){ moveCharacterLeft(gnome); });
 $(document).ready(function() {
     create_world();
+    initialize_characters();
+    initialize_viewport();
 		drawTiles();
-		$("#upButton").click(function(){
-      movePlayerUp();
-		});
-		$("#downButton").click(function(){
-      movePlayerDown();
-		});
-		$("#rightButton").click(function(){
-      movePlayerRight();
-		});
-		$("#leftButton").click(function(){
-      movePlayerLeft();
-		});
+	  character = $('<div id="character" style="left:326px; top:151px"></div>');
+    $("#screen").append(character);
 });
 /*
 var dialog = [{"Jenny":"Oh good. you're awake!","1-":"Where am I?","  Jenny: "In my house."
